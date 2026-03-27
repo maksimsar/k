@@ -1,10 +1,16 @@
-function UsersToolbar({ count, isFormOpen, onToggleForm }) {
+function UsersToolbar({
+  totalCount,
+  visibleCount,
+  isFormOpen,
+  onToggleForm
+}) {
   return (
     <div className="users-toolbar">
       <div className="users-toolbar__text">
         <h2 className="users-toolbar__title">Управление пользователями</h2>
         <p className="users-toolbar__subtitle">
-          Всего пользователей: <strong>{count}</strong>
+          Показано: <strong>{visibleCount}</strong> из{' '}
+          <strong>{totalCount}</strong>
         </p>
       </div>
 
